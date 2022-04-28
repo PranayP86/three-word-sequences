@@ -12,7 +12,6 @@ Table of Contents
   - [Program Efficiency and Run Times](#Program-Efficiency-and-Run-Times)
   - [Dockerized App](#Dockerized-App)
   - [Development Notes](#Development-Notes)
-  - [To Do](#To-Do)
   - [Known Issues](#Known-Issues)
 
 ## Description
