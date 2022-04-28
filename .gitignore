@@ -1,0 +1,11 @@
+venv/
+.mypy_cache/
+.pytest_cache/
+.tox/
+.vscode/
+*/__pycache__/
+*.egg-info/
+.coverage
+full_text.txt
+*.pyc
+.DS_Store
