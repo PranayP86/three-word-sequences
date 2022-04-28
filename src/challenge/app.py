@@ -3,8 +3,6 @@ import re
 import shutil
 from typing import List, Tuple, Optional
 from nltk.collocations import TrigramCollocationFinder
-# import time
-# start_time = time.time()
 
 
 def main():
@@ -79,11 +77,6 @@ def replace_escapes(text: str) -> List[str]:
     words = re.sub("/[^a-zA-Z]+('A-Za-z]+)?/g", " ", text).split()
     return words
 
-# def replace_escapes(text: str) -> List[str]:
-#     res = "".join(re.findall('''[^\n\t\r\b\f\a\v\\\”“".!,:;?]+''', text))
-#     words = re.sub("/[^a-zA-Z]+('A-Za-z]+)?/g", " ", res).split()
-#     return text
-
 
 def process_trigrams(lines: List[str]) -> List[Tuple[Tuple[str], int]]:
     """Separates all word trigrams with ordered respective frequency.
@@ -102,5 +95,3 @@ def process_trigrams(lines: List[str]) -> List[Tuple[Tuple[str], int]]:
 
 if __name__ == "__main__":
     sys.exit(main())
-#     main()
-# print("___ {} seconds ___".format(time.time() - start_time))

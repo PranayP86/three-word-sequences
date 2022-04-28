@@ -10,7 +10,7 @@ Table of Contents
     - [Clone and Run Project](#Clone-and-Run-Project)
   - [Running Automated Tests](#Running-Automated-Tests)
   - [Program Efficiency and Run Times](#Program-Efficiency-and-Run-Times)
-  - [Docker](#Docker)
+  - [Dockerized App](#Dockerized-App)
   - [Development Notes](#Development-Notes)
   - [To Do](#To-Do)
   - [Known Issues](#Known-Issues)
@@ -89,9 +89,9 @@ These files were taken from the [Project Gutenberg Archive](https://www.gutenber
 
 | Book | Filename  | Size | Word Count |
 | ---- |:---------:| ----:| ----------:|
+| Moby Dick by Herman Melville | mobydick.txt | 1.2 MB | 212,063 |
 | Anna Karenina by Leo Tolstoy| annakarenina.txt | 2 MB | 349,751 |
 | Don Quixote by Miguel de Cervantes | donquixote.txt | 2.3 MB | 423,694 |
-| Moby Dick by Herman Melville | mobydick.txt | 1.2 MB | 212,063 |
 
 Using this, I could see if certain statements were taking longer than others.
 
@@ -100,13 +100,23 @@ The lowest time (initial, not consecutive runs) was:
 ___ 4.112549304962158 seconds ___
 ```
 However, running consecutively many times increases the time inconsistently, ranging from 4.7 to 5.4 seconds. 
-(Likely due to CPU usage)
+(Likely due to CPU usage).
 
-## Docker
+## Dockerized App
+I took a different approach for the extra credit. 
+I decided to create a simple Flask app (basic setup), Dockerize it, and deploy it on Azure.
+
+The image is built with the [Dockerfile](web_app/Dockerfile) and is running as a containerized web app. 
+For the sake of time, I configured it to run on custom text values from an input field.
+
+Note: When inputting my entire, combined text file (5.6 MB), it lags on the clipboard paste. If this happens, just wait while it completes pasting and then click "Submit".
+
+[You can see it running here.](http://threewordsequences.eastus.azurecontainer.io/)
 
 ## Development Notes
 
-## To Do
+- When parsing and trimming the text of escape characters and punctuation, I ended up using the .replace method in a for loop. With more time, I could've refactored some functions and maybe ran it ~1 second quicker. However, I did end up testing it with two regex statements (one for empty replacements and one for space replacements). This, for some reason, added 2-3 seconds to the average runtime compared to the .replace method. My thought process was that using methods like regex and .translate would offer "lower-level" efficiency, but .replace was the most efficient. With more time, I could optimize it further.
 
 ## Known Issues
 
+- No known issues as of now.
