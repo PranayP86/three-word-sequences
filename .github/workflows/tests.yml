@@ -1,20 +1,10 @@
-name: Tox Test and flake8
+name: Tox Test
 
 on:
   - push
   - pull_request
 
 jobs:
-  flake8-lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python environment
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.8"
-    - name: flake8 Lint
-      uses: py-actions/flake8@v2
   test:
     runs-on: ${{ matrix.os }}
     strategy:

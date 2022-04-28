@@ -1,5 +1,7 @@
 # New Relic - Common 3 Word Phrases
 
+![Tests](https://github.com/PranayP86/three-word-sequences/actions/workflows/tests.yml/badge.svg)
+
 Table of Contents
 
   - [Description](#Description)
