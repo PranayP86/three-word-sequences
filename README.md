@@ -9,6 +9,7 @@ Table of Contents
     - [Prerequisites](#Prerequisites)
     - [Clone and Run Project](#Clone-and-Run-Project)
   - [Running Automated Tests](#Running-Automated-Tests)
+  - [GitHub Actions Tests](#GitHub-Actions-Tests)
   - [Program Efficiency and Run Times](#Program-Efficiency-and-Run-Times)
   - [Dockerized App](#Dockerized-App)
   - [Development Notes](#Development-Notes)
@@ -79,6 +80,11 @@ $ flake8 src
 # Note: Made to work with GitHub Actions. Will throw InterpreterNotFound for any version not installed if running locally.
 $ tox
 ```
+## GitHub Actions Tests
+
+Along with the automated tests, you can view the Tox test that I've configured for GitHub Actions. This will, on each push or pull request, will run the Tox test in multiple Python environments on both Linux and Windows environments. 
+
+This ensures that the app runs consistently across more machines, instead of just my local one. The "checkmark" by the commit and the Tox Test badge show that the code is passing.
 
 ## Program Efficiency and Run Times
 
