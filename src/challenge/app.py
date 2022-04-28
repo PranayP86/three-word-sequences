@@ -22,8 +22,7 @@ def main():
         text = ""
         for line in sys.stdin:
             text += line
-        lines = load_text(input_text='\\n', stdin=True)
-        return
+        lines = load_text(input_text=text, stdin=True)
     print_words(lines)
 
 
@@ -103,5 +102,5 @@ def process_trigrams(lines: List[str]) -> List[Tuple[Tuple[str], int]]:
 
 if __name__ == "__main__":
     sys.exit(main())
-    # main()
+#     main()
 # print("___ {} seconds ___".format(time.time() - start_time))
