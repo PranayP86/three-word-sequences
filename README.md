@@ -22,7 +22,7 @@ Python program that, when given text file(s), will return a list of the top 100 
 
 ### Prerequisites
 
-Python3 (3.7 or higher) is required. Run `python --version` to check version:
+Python 3 (3.7 or higher) is required. Run `python --version`to check version:
 
 ```bash
 $ python --version
@@ -34,11 +34,11 @@ Python 3.7.12
 Sample text files can be found in the 'src/files/' directory.
 
 ```bash
-# Clone This repository
+# Clone this repo
 git clone ---repo here
 
-# Run the program file and give file arguments
-python3 src/__main__.py sample/*
+# Run the program file and pass file arguments
+python src/__main__.py sample/*
 
 Or
 
