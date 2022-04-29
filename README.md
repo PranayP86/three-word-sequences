@@ -21,6 +21,7 @@ Python program that, when given text file(s), will return a list of the top 100 
 
 ## Installing and Running Program
 
+***Included installation code snippets for bash commands. Running tests using Linux or Mac would be preferred.***
 
 ### Prerequisites
 
