@@ -38,10 +38,10 @@ def load_text(files: Optional[List[str]] = None, input_text: Optional[str] = Non
     if stdin and input_text:
         lines = input_text
     else:
-        with open("full_text.txt", "w") as full:
+        with open("full_text.txt", "wb") as full:
             if files:
                 for file in files:
-                    with open(file, "r") as file_piece:
+                    with open(file, "rb") as file_piece:
                         shutil.copyfileobj(file_piece, full)
         with open("full_text.txt", "r", encoding='utf8') as full:
             read_lines = full.readlines()
