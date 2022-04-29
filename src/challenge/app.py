@@ -43,9 +43,9 @@ def load_text(files: Optional[List[str]] = None, input_text: Optional[str] = Non
                 for file in files:
                     with open(file, "rb") as file_piece:
                         shutil.copyfileobj(file_piece, full)
-        with open("full_text.txt", "r", encoding='utf8') as full:
+        with open("full_text.txt", "r", encoding='utf8') as full:  # type: ignore[assignment]
             read_lines = full.readlines()
-            lines = " ".join(x for x in read_lines)
+            lines = " ".join(x for x in read_lines)  # type: ignore[misc]
     words = replace_escapes(lines.lower())
     return words
 
