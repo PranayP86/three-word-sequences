@@ -12,7 +12,7 @@ Table of Contents
   - [GitHub Actions Tests](#GitHub-Actions-Tests)
   - [Program Efficiency and Run Times](#Program-Efficiency-and-Run-Times)
   - [Dockerized App](#Dockerized-App)
-  - [Development Notes](#Development-Notes)
+  - [Development Notes and To Do](#Development-Notes-and-To-Do)
   - [Known Issues](#Known-Issues)
 
 ## Description
@@ -118,9 +118,11 @@ Note: When inputting my entire, combined text file (5.6 MB), it lags on the clip
 
 [You can see it running here.](http://threewordsequences.eastus.azurecontainer.io/)
 
-## Development Notes
+## Development Notes and To Do
 
 - When parsing and trimming the text of escape characters and punctuation, I ended up using the .replace method in a for loop. With more time, I could've refactored some functions and maybe ran it ~1 second quicker. However, I did end up testing it with two regex statements (one for empty replacements and one for space replacements). This, for some reason, added 2-3 seconds to the average runtime compared to the .replace method. My thought process was that using methods like regex and .translate would offer "lower-level" efficiency, but .replace was the most efficient. With more time, I could optimize it further.
+- The extra credit was initially supposed to use a database instance as well to allow another function of the app to list uploaded text files and responses from users. This would be displayed on another "Library" screen, ideally showing multiple books/filenames and their respective top 100 three word sequences. As I already spent a good deal of time into it, I decided to keep it simple, but with more time I'd have added that.
+- With more time, I'd liked to have implemented some catches on the file uploads to validate that they are readable .txt files and added some tests. This would avoid potential reading and parsing errors.
 
 ## Known Issues
 
